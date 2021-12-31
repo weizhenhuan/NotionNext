@@ -9,12 +9,12 @@ const Footer = ({ title }) => {
   const y = d.getFullYear()
   return (
     <footer
-      className='bg-gray-800 dark:bg-black dark:border-gray-900 border-t flex-shrink-0 justify-center text-center m-auto w-full text-gray-400 text-sm p-6'
+      className='flex-shrink-0 justify-center text-center m-auto w-full text-gray-400 leading-6 text-sm p-6'
     >
-      <FontAwesomeIcon icon={faCopyright} /> {` ${y}`} <span> <a href={BLOG.link} className='underline font-bold text-gray-100'>{BLOG.author}</a>. Powered by <a href='https://notion.so' className='underline font-bold text-gray-100'>Notion</a> & <a href='https://github.com/tangly1024/NotionNext' className='underline font-bold text-gray-100'>NotionNext</a>.</span>
+      <FontAwesomeIcon icon={faCopyright} /> {` ${y}`} <span> <a href={BLOG.link} className='underline'>{BLOG.author}</a>. Powered by <a href='https://notion.so' className='underline'>Notion</a> & <a href='https://github.com/tangly1024/NotionNext' className='underline'>NotionNext</a>.</span>
       <br />
-      <FontAwesomeIcon icon={faShieldAlt} /> <a href='https://beian.miit.gov.cn/' className='ml-1 font-bold'>闽ICP备20010331号</a>
-      <span > <Link href='/article/privacy-policy' ><a className='ml-1 mr-1 font-bold underline'>隐私政策</a></Link></span>
+      <FontAwesomeIcon icon={faShieldAlt} /> <a href='https://beian.miit.gov.cn/' className='ml-1 '>闽ICP备20010331号</a>
+      <span > <Link href='/article/privacy-policy' ><a className='ml-1 mr-1 underline'>隐私政策</a></Link></span>
 
       <span className='hidden busuanzi_container_site_pv'>
             <FontAwesomeIcon icon={faEye}/><span className='px-1 busuanzi_value_site_pv'> </span>pv

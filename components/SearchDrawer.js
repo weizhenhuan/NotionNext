@@ -17,7 +17,7 @@ const SearchDrawer = ({ cRef }) => {
   return (
     <>
       <div ref={searchDrawer} onClick={hidden} className="hidden animate__animated animate__fadeIn fixed w-screen h-screen glassmorphism z-50 items-center justify-center ">
-        <div className="mx-auto -mt-14 w-96">
+        <div className="absolute top-14 w-96">
           <SearchInput cRef={searchInputRef}/>
         </div>
       </div>

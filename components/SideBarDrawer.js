@@ -1,4 +1,5 @@
 import SideBar from '@/components/SideBar'
+import { Router } from 'next/router'
 import React, { useEffect, useImperativeHandle, useState } from 'react'
 
 /**
@@ -15,10 +16,17 @@ const SideBarDrawer = ({ post, currentTag, cRef, tags, posts, categories, curren
   })
 
   useEffect(() => {
-    const sideBarWrapperElement = document.getElementById('sidebar-wrapper')
-    sideBarWrapperElement?.classList?.remove('hidden')
+    setTimeout(() => {
+      const sideBarWrapperElement = document.getElementById('sidebar-wrapper')
+      sideBarWrapperElement?.classList?.remove('hidden')
+    }, 500)
   })
-
+  Router.events.on('routeChangeComplete', (...args) => {
+    console.log('isShow', isShow)
+    if (isShow) {
+      switchSideDrawerVisible()
+    }
+  })
   // 点击按钮更改侧边抽屉状态
   const [isShow, changeHiddenStatus] = useState(false)
   const switchSideDrawerVisible = () => {

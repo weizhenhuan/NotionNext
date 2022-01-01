@@ -1,3 +1,4 @@
+import { Router } from 'next/router'
 import { useImperativeHandle, useRef } from 'react'
 import SearchInput from './SearchInput'
 const SearchDrawer = ({ cRef }) => {
@@ -6,22 +7,28 @@ const SearchDrawer = ({ cRef }) => {
   useImperativeHandle(cRef, () => {
     return {
       show: () => {
-        searchDrawer.current.classList.replace('hidden', 'flex')
-        searchInputRef.current.focus()
+        searchDrawer?.current?.classList?.remove('hidden')
+        searchInputRef?.current.focus()
       }
     }
   })
   const hidden = () => {
-    searchDrawer.current.classList.replace('flex', 'hidden')
+    searchDrawer?.current?.classList?.add('hidden')
   }
+  Router.events.on('routeChangeComplete', (...args) => {
+    hidden()
+  })
   return (
-    <>
-      <div ref={searchDrawer} onClick={hidden} className="hidden animate__animated animate__fadeIn fixed w-screen h-screen glassmorphism z-50 items-center justify-center ">
-        <div className="absolute top-14 w-96">
-          <SearchInput cRef={searchInputRef}/>
-        </div>
+    <div id='search-drawer-wrapper' ref={searchDrawer} className='hidden'>
+      <div className='flex absolute px-5 w-full h-full left-0 top-14 z-50 justify-center'>
+          <div className='md:max-w-3xl w-full mx-auto'>
+          <SearchInput cRef={searchInputRef} />
+          </div>
       </div>
-    </>
+
+      {/* 背景蒙版 */}
+      <div id='search-drawer-background' onClick={hidden} className='animate__animated animate__faster animate__fadeIn fixed glassmorphism top-0 left-0 z-30 w-full h-full' />
+    </div>
   )
 }
 

@@ -28,7 +28,7 @@ export default function Header () {
   return (
     <header
       id="header"
-      className="duration-500 md:bg-fixed bg-cover bg-center my-32 h-96 mx-5 md:mx-0 md:rounded-3xl bg-black"
+      className="duration-500 md:bg-fixed bg-cover bg-center mt-24 mb-32 h-96 mx-5 md:mx-0 md:rounded-3xl bg-black"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${BLOG.bannerImage}")`
       }}

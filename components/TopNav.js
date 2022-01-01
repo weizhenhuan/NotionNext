@@ -41,7 +41,7 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
 
         {/* 右侧功能 */}
         <div className='mr-1 flex flex-nowrap flex-grow justify-end items-center text-sm space-x-4 font-serif dark:text-gray-200'>
-              <div className="cursor-pointer" onClick={() => { searchDrawer.current.show() }}>
+              <div className="cursor-pointer" onClick={() => { searchDrawer?.current?.show() }}>
               <FontAwesomeIcon icon={faSearch} className="mr-2" />
               {locale.NAV.SEARCH}
             </div>

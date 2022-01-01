@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolder, faFolderOpen } from '@fortawesome/free-solid-svg-icons'
+import { faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { useGlobal } from '@/lib/global'
 
 const CategoryList = ({ currentCategory, categories }) => {
@@ -24,8 +24,7 @@ const CategoryList = ({ currentCategory, categories }) => {
               }`}
           >
             <a>
-            <FontAwesomeIcon icon={selected ? faFolderOpen : faFolder} className='mr-1' />
-              {`${category} `}
+            {selected && <FontAwesomeIcon icon={faFolderOpen} className='mr-1' />} {`${category}`}
             </a>
           </li>
         </Link>)

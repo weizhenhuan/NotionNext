@@ -53,7 +53,7 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
   return (<>
       <div id="article-wrapper" ref={targetRef} className="overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
           <article itemScope itemType="https://schema.org/Movie"
-            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-24 md:px-24  dark:border-gray-700 bg-white dark:bg-gray-800"
+            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased p-5 lg:pt-24 md:px-24  dark:border-gray-700 bg-white dark:bg-gray-800"
           >
 
             <header className='animate__slideInDown animate__animated'>
@@ -65,7 +65,7 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
                 )}
 
                 {/* 文章Title */}
-                <div className="font-bold text-3xl text-black dark:text-white font-serif pt-10">
+                <div className="font-bold text-3xl text-black dark:text-white font-serif pt-5">
                   {post.title}
                 </div>
 

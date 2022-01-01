@@ -28,16 +28,16 @@ export default function Header () {
   return (
     <header
       id="header"
-      className="duration-500 md:bg-fixed bg-cover bg-center mb-24 h-96 mx-5 md:mx-0 md:rounded-3xl bg-black"
+      className="duration-500 md:bg-fixed bg-cover bg-center my-32 h-96 mx-5 md:mx-0 md:rounded-3xl bg-black"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${BLOG.bannerImage}")`
       }}
     >
-      <div className=" flex h-96 items-center justify-center w-full text-4xl md:text-7xl text-white">
+      <div className="flex h-96 items-center justify-center w-full text-4xl md:text-7xl text-white">
         <div id="typed" className="flex text-center font-serif" />
       </div>
       <Link passHref href={'/about'}>
-        <div className="hover:rotate-45 hover:scale-125 transform duration-200 -mt-20 cursor-pointer flex w-full justify-center">
+        <div className="hover:rotate-45 hover:scale-125 transform duration-200 -mt-16 cursor-pointer flex w-full justify-center">
             <Image
               alt={BLOG.title}
               width={120}

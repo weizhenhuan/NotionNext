@@ -30,7 +30,7 @@ const SideBar = ({ title, tags, currentTag, post, posts, categories, currentCate
 
     <div className={(!post ? 'sticky top-0' : '') + ' bg-white dark:bg-gray-900 pb-4'}>
 
-      <section className='hidden lg:block'>
+      <section>
         <MenuButtonGroup allowCollapse={true} />
       </section>
 
